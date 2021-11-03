@@ -1,0 +1,141 @@
+.login-body {
+  max-width: 450px;
+  margin: 0 auto -236px;
+  min-height: 100vh;
+  background-color: transparent;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+  color: #8c8c8c;
+  .login {
+    display: flex;
+    flex-direction: column;
+    background: rgba(000, 000, 000, 0.75);
+    border-radius: 4px;
+    min-width: 300px;
+    height: 100%;
+    padding: 60px 68px 150px;
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: $color-white;
+    }
+
+    &__group {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+
+      &__label {
+        position: absolute;
+        z-index: 150;
+        color: $color-gray;
+        font-size: 0.9rem;
+        top: 20px;
+        left: 18px;
+        transition: all 300ms ease-in;
+        will-change: transform;
+      }
+      .inputError {
+        font-size: 13px;
+        color: $color-orange;
+      }
+
+      &__input {
+        width: 100%;
+        position: relative;
+        z-index: 100;
+        background: #333;
+        border-radius: 4px;
+        border: none;
+        opacity: 1;
+        font-size: 1rem;
+        color: $color-white;
+        height: 50px;
+        line-height: 50px;
+        padding: 12px 18px 0;
+
+        &:focus + .login__group__label {
+          top: 8px;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    &__sign-in {
+      margin: 24px 0 12px;
+      padding: 16px;
+      color: $color-white;
+      background: $color-red;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    &__secondary-cta {
+      position: relative;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      &__text {
+        opacity: 1;
+        font-size: 0.9rem;
+        color: $color-gray;
+        text-decoration: none;
+        will-change: transform;
+
+        &--need-help {
+          transition: all 0.3s ease-in;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &__signup-now {
+      display: flex;
+
+      margin: 16px 0;
+      &__link {
+        color: $color-white;
+        font-weight: 500;
+      }
+    }
+  }
+
+  ::placeholder {
+    font-size: 0.7rem;
+  }
+
+  .recaptcha-terms-of-use {
+    font-size: 13px;
+    &--link-button {
+      background-color: transparent;
+      border: none;
+      color: blue;
+      display: inline;
+    }
+  }
+  .fb-login {
+    display: flex;
+    flex-direction: row;
+    .icon-facebook {
+      margin-right: 10px;
+      display: inline;
+      height: 20px;
+      width: 20px;
+      background-color: $color-white;
+    }
+    .fb-text {
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "email": {
+    "label": "Email or phone number",
+    "type": "email",
+    "instructions": ""
+  },
+  "password": {
+    "label": "Password",
+    "type": "password",
+    "instructions": ""
+  },
+  "name": {
+    "label": "Name",
+    "type": "text",
+    "instructions": ""
+  }
+}

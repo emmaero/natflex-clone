@@ -1,0 +1,21 @@
+.nav-sign-up {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #e6e6e6;
+  .logo {
+    max-width: 180px;
+  }
+  &__sign-in {
+    color: #333;
+    font-weight: 700;
+    font-size: 19px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 3%;
+  }
+}
