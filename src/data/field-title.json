@@ -1,0 +1,17 @@
+{
+  "title": {
+    "label": "Title",
+    "type": "text",
+    "instructions": ""
+  },
+  "videoId": {
+    "label": "Video ID",
+    "type": "text",
+    "instructions": ""
+  },
+  "description": {
+    "label": "Description",
+    "type": "text",
+    "instructions": ""
+  }
+}
