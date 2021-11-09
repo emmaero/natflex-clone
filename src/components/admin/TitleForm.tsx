@@ -56,7 +56,7 @@ export default function TitleForm({ onAdd }: iProps) {
         label="Category"
         options={options}
       />
-      {category === options[0] ? (
+      {category !== options[1] ? (
         <InputField state={[videId, setVideoId]} options={option.videoId} />
       ) : (
         ""

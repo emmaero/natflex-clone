@@ -1,21 +1,17 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import AddEpisode from "../../pages/AddEpisode";
-import AddTitlePage from "../../pages/AddTitlePage";
-import LoginPage from "../../pages/LoginPage";
-import SignUpPage from "../../pages/SignUpPage";
+import { BrowserRouter, Switch } from "react-router-dom";
+import Logged from "../../routes/Logged";
+
+import Unlogged from "../../routes/Unlogged";
 //Project files
 
-// interface iProp {
-//   isLogged: boolean;
-// }
-export default function Browser() {
+interface iProp {
+  isLogged: boolean;
+}
+export default function Browser({isLogged}:iProp) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route component={LoginPage} exact path="/" />
-        <Route component={SignUpPage} exact path="/sign-up" />
-        <Route component={AddTitlePage} exact path="/admin" />
-        <Route component={AddEpisode} exact path="/serie" />
+        {isLogged ? <Logged /> : <Unlogged />}
       </Switch>
     </BrowserRouter>
   );

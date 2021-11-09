@@ -7,7 +7,7 @@ export default function LoginPage() {
       <a href="/" className="logo-link">
         <img className="logo" src={logo} alt="" />
       </a>
-      <FormLogin />
+      <FormLogin/>
       <div className="overlay"></div>
     </div>
   );
