@@ -1,0 +1,17 @@
+{
+    "thumbnail":{
+        "label":"Thumbnail",
+        "height":300,
+        "width":170
+    },
+    "titleLogo":{
+        "label":"Title logo",
+        "height":1000,
+        "width":600
+    },
+    "background":{
+        "label":"Background Image",
+        "height":1440,
+        "width":900
+    }
+}
