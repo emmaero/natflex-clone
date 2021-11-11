@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import Browser from "./components/shared/Browser";
+import Modal from "./components/shared/Modal";
 import { getDocument } from "./scripts/firestore";
 import { useAuth } from "./states/AuthProvider";
 import { useUser } from "./states/UserProvider";
@@ -21,7 +22,6 @@ function App() {
         setStatus(1);
       } else if (uid !== "") {
         const user = await getDocument(path, uid);
-
         setUser(user);
         setIsLogged(true);
         setStatus(1);
@@ -39,6 +39,7 @@ function App() {
       {status === 0 && <p>loading</p>}
       {status === 1 && <Browser isLogged={isLogged} />}
       {status === 2 && <p>error</p>}
+      <Modal />
     </div>
   );
 }

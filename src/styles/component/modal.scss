@@ -1,0 +1,91 @@
+.modal-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  .modal-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .modal-content {
+    position: relative;
+    top: 100px;
+    width: 60%;
+    min-height: 70%;
+    border-radius: 10px;
+    margin: auto;
+
+    .modal-preview {
+      position: relative;
+      background-color: $color-black-1;
+      .modal-preview-images {
+        .modal-image {
+          position: relative;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+        .modal-play {
+          position: absolute;
+          bottom: 250px;
+          left: 100px;
+        }
+        .modal-title-logo {
+          position: absolute;
+          object-fit: contain;
+          z-index: 6;
+          bottom: 50%;
+          left: 24px;
+          width: 40%;
+        }
+        .image-overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.2),
+            $color-black-1 85%
+          );
+        }
+      }
+      .modal-description {
+        line-height: 1.7;
+        position: relative;
+        top: 0;
+        min-height: 150px;
+        padding: 16px;
+        display: grid;
+        grid-template-columns: 1fr 35%;
+        grid-gap: 10px;
+        .description-content {
+          color: $color-white;
+          .videoMetadata {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            font-size: 14px;
+            align-items: center;
+            .maturity-number,
+            .player-feature-badge {
+              border: 1px solid $color-gray;
+              padding: 2px 4px;
+            }
+            .player-feature-badge {
+              font-size: 10px;
+            }
+          }
+        }
+        .previewModal--detailsMetadata {
+          font-size: 14px;
+          a {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
