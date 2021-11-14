@@ -21,21 +21,22 @@
       position: relative;
       background-color: $color-black-1;
       .modal-preview-images {
+        position: relative;
         .modal-image {
           position: relative;
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
         }
         .modal-play {
-          position: absolute;
-          bottom: 250px;
+          position: relative;
+          bottom: 80px;
           left: 100px;
         }
         .modal-title-logo {
           position: absolute;
           object-fit: contain;
           z-index: 6;
-          bottom: 50%;
+          top: 50%;
           left: 24px;
           width: 40%;
         }

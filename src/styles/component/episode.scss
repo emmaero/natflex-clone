@@ -1,0 +1,68 @@
+.episode-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  .space-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  select {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    background: #333;
+    border-radius: 4px;
+    border: 1px solid $color-gray;
+    opacity: 1;
+    font-size: 1rem;
+    color: $color-white;
+    height: 50px;
+    line-height: 50px;
+    padding: 8px 16px;
+  }
+}
+.modal-episode {
+  margin: 0 32px;
+  color: $color-white;
+  .episode-card {
+    display: flex;
+    flex-direction: row;
+    padding: 0 16px;
+    background-color: transparent;
+    color: $color-white;
+    border: none;
+    iframe {
+      height: 170px;
+      width: 300px;
+    }
+    .episode-thumbnail {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 0;
+      .number-thumbnail {
+        display: block;
+        margin: 0 32px;
+      }
+    }
+    .episode-text {
+      padding: 16px 48px;
+      text-align: left;
+      .space-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .episode-title {
+        padding: 8px 0;
+      }
+    }
+
+    &:hover {
+      background-color: $color-black-2;
+    }
+  }
+}
