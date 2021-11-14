@@ -1,5 +1,7 @@
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 import { iTitle } from "../../interfaces/iTitle";
+import Type from "../../interfaces/titleType";
 import { useModal } from "../../states/ModalProvider";
 import ModalPreview from "./ModalPreview";
 
@@ -11,22 +13,35 @@ export default function TitleItem({ item }: iProp) {
   // Global state
   const { setModal } = useModal();
 
-  const { thumbnail, backgoundURL, titleLogoURL, title, videId } = item;
+  const { thumbnail, category, titleLogoURL, title, videId, season1 } = item;
 
-  function onPlay() {
+  let vidoeId = videId;
+  if (category === Type.SERIE) {
+    if (season1 !== undefined) vidoeId = season1[0];
+  }
+  function onPlay(videoId: string) {
     //@ts-ignore
     setModal(null);
-    history.push(`/video/${videId}`);
+    history.push(`/video/${videoId}`);
   }
   return (
     <div
-      //@ts-ignore
-      onClick={() => setModal(<ModalPreview item={item} modalPlay={onPlay} />)}
+      onClick={() =>
+        //@ts-ignore
+        setModal(
+          <ModalPreview
+            item={item}
+            videoId={vidoeId}
+            onPlay={onPlay}
+            modalPlay={onPlay}
+          />
+        )
+      }
       className="item"
     >
       <div className="title-image">
         <img src={titleLogoURL} alt={title} className="title-logo" />
-        <img src={backgoundURL} alt="Describe Image" />
+        <img src={thumbnail} alt="Describe" />
       </div>
     </div>
   );

@@ -9,4 +9,6 @@ export interface iTitle {
   videId: string;
   description:string;
   category: Type;
+  season1:string[]
+  season2:string[]
 }

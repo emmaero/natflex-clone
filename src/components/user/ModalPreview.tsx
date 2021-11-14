@@ -1,33 +1,30 @@
-import { useState } from "react";
 import { iTitle } from "../../interfaces/iTitle";
 import Type from "../../interfaces/titleType";
-import { useModal } from "../../states/ModalProvider";
 import ModalMetadata from "./ModalMetadata";
+import ThumbnailList from "./ThumbnailList";
 interface iProp {
   item: iTitle;
   modalPlay: Function;
+  onPlay: Function;
+  videoId: string;
 }
-export default function ModalPreview({ item, modalPlay }: iProp) {
+export default function ModalPreview({
+  item,
+  modalPlay,
+  onPlay,
+  videoId,
+}: iProp) {
   //Global state
-  const { setModal } = useModal();
-
-  const {
-    thumbnail,
-    backgoundURL,
-    titleLogoURL,
-    title,
-    description,
-    category,
-  } = item;
+  const { backgoundURL, titleLogoURL, description, category } = item;
 
   return (
     <div className="modal-preview">
       <div className="modal-preview-images">
-        <img className="modal-image" src={backgoundURL} alt="generated image" />
+        <img className="modal-image" src={backgoundURL} alt="generated" />
         <img className="modal-title-logo" src={titleLogoURL} alt="</div>" />
         <div className="image-overlay"></div>
         <div className="modal-play">
-          <button onClick={() => modalPlay()} className="play btn">
+          <button onClick={() => modalPlay(videoId)} className="play btn">
             <i className="fas fa-play"></i>
             Play
           </button>
@@ -49,6 +46,11 @@ export default function ModalPreview({ item, modalPlay }: iProp) {
         </div>
         <ModalMetadata />
       </div>
+      {category === Type.SERIE ? (
+        <ThumbnailList onPlay={onPlay} series={item} />
+      ) : (
+        ""
+      )}
     </div>
   );
 }

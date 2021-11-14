@@ -1,6 +1,12 @@
 .button-play {
 }
-
+.button-link {
+  background: transparent;
+  border: none;
+  color: $color-white;
+  font-size: inherit;
+  cursor: pointer;
+}
 .play {
   background-color: $color-white;
   color: $color-black !important;

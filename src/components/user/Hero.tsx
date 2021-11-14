@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 import { iTitle } from "../../interfaces/iTitle";
-import ButtonPlay from "./ButtonPlay";
+
 import UserNavigation from "./UserNavigation";
 interface iProp {
   item: iTitle;
 }
 export default function Hero({ item }: iProp) {
   if (item === undefined) return null;
-  const { titleLogoURL, description, title, backgoundURL, videId:videoId } = item;
+  const { titleLogoURL, description, backgoundURL, videId: videoId } = item;
   return (
     <div className="wrapper">
       <header>
         <img className="hero-img" src={backgoundURL} alt="" />
         <UserNavigation />
         <div className="description">
-          <img className="show-logo" src={titleLogoURL} />
+          <img className="show-logo" src={titleLogoURL} alt="natflex" />
           <p>{description}</p>
           <Link to={`/video/${videoId}`} className="play btn">
             <i className="fas fa-play"></i> Play

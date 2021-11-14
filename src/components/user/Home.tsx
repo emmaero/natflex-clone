@@ -1,8 +1,6 @@
-import { useState } from "react";
 import useFetch from "../../customHook/useFetch";
 import { iTitle } from "../../interfaces/iTitle";
 import Type from "../../interfaces/titleType";
-
 import Hero from "./Hero";
 import TitleItem from "./TitleItem";
 import TitleList from "./TitleList";
@@ -15,12 +13,11 @@ export default function Home() {
   const series = data.filter((item: iTitle) => item.category === Type.SERIE);
   const documentaries = data.filter(
     (item: iTitle) => item.category === Type.DOCUMENTARY
-    );
-    const hero = data.find((item:iTitle) => item !== undefined);
+  );
+  const hero = data.find((item: iTitle) => item !== undefined);
 
   return (
     <div className="home">
-  
       {loading && <p>Loading ⏱</p>}
       {data && (
         <>

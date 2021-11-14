@@ -6,34 +6,34 @@ export default function ModalMetadata() {
       <div className="previewModal--tags">
         <span className="previewModal--tags-label">Cast:</span>
         <span className="tag-item">
-          <a href="#"> Tom Cruise, </a>
+          <a href="/"> Tom Cruise, </a>
         </span>
         <span className="tag-item">
-          <a href="#">Jamie Foxx, </a>
+          <a href="/">Jamie Foxx, </a>
         </span>
         <span className="tag-item">
-          <a href="#">Jada Pinkett Smith, </a>
+          <a href="/">Jada Pinkett Smith, </a>
         </span>
-        <span className="tag-more" >
-          <a href="#">more</a>
+        <span className="tag-more">
+          <a href="/">more</a>
         </span>
       </div>
       <div className="previewModal--tags">
         <span className="previewModal--tags-label">Genres:</span>
         <span className="tag-item">
-          <a href="#"> Romatic TV Comedies, </a>
+          <a href="/"> Romatic TV Comedies, </a>
         </span>
         <span className="tag-item">
-          <a href="#">Sitcoms, </a>
+          <a href="/">Sitcoms, </a>
         </span>
         <span className="tag-item">
-          <a href="#">Comedy Programmes</a>
+          <a href="/">Comedy Programmes</a>
         </span>
       </div>
       <div className="previewModal--tags">
         <span className="previewModal--tags-label">This programme is:</span>
         <span className="tag-item">
-          <a href="#"> Sentimental</a>
+          <a href="/"> Sentimental</a>
         </span>
       </div>
     </div>

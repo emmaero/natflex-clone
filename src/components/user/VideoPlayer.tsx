@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
-import { iTitle } from "../../interfaces/iTitle";
+
 type PropParams = {
   videoId: string;
 };

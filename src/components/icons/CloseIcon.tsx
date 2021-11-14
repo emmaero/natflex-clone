@@ -1,4 +1,3 @@
-import React, { ElementType } from "react";
 interface iProp {
   iconClick: Function;
 }
