@@ -25,7 +25,6 @@ export default function useFetch(path: string) {
   );
   useEffect(() => {
     fetchData(path);
-    console.log("useFetch");
   }, [fetchData,path]);
   return { data, loading, error };
 }

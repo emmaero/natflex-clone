@@ -13,81 +13,7 @@
       position: absolute;
       z-index: 0;
     }
-    nav {
-      position: relative;
-      background: $color-black;
-      color: $color-white;
-      padding: 1.4em;
-      display: flex;
-      align-items: center;
-      #logo {
-        width: 6.5em;
-        margin-right: 2em;
-      }
-      .left-menu {
-        display: flex;
-        align-items: baseline;
-        a {
-          cursor: pointer;
-          margin: 0 1em;
-          &:hover {
-            color: $color-gray;
-          }
-        }
-      }
-      .right-menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: auto;
-        h5 {
-          cursor: pointer;
-          &:hover {
-            color: $color-red;
-          }
-        }
-        .fa-search {
-          margin-right: 0.5em;
-        }
-        .user {
-          svg {
-            width: 24px;
-          }
-          .fa-caret-down {
-            margin: 0.2em 0.6em 0.2em 0.4em;
-            width: 12px;
-            transition: $duration;
-          }
-          margin: 0 1.2em;
-          .user-links {
-            position: absolute;
-            display: none;
-            ul {
-              list-style: none;
-              border-bottom: solid 1px $color-gray;
-              li {
-                padding: 8px 0;
-                cursor: pointer;
-              }
-              margin-bottom: 8px;
-            }
-          }
-          img {
-            width: 3em;
-            height: 3em;
-            margin-right: 1em;
-          }
-          &:hover {
-            .user-links {
-              display: block;
-            }
-            .fa-caret-down {
-              transform: rotate(180deg);
-            }
-          }
-        }
-      }
-    }
+
     .description {
       position: relative;
       color: $color-white;
@@ -102,10 +28,10 @@
       }
 
       .more {
-        background: lighten($color-black-transparent, 10%);
+        background: lighten($color-black-transparent, 25%);
         border: none;
         &:hover {
-          background-color: lighten($color-black-transparent, 15%);
+          background-color: lighten($color-black-transparent, 35%);
         }
       }
     }

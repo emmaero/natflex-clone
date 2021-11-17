@@ -2,11 +2,11 @@
   "email": {
     "label": "Email or phone number",
     "type": "email",
-    "instructions": ""
+    "instructions": "Please enter a valid email address or phone number."
   },
   "password": {
     "label": "Password",
     "type": "password",
-    "instructions": ""
+    "instructions": "Your password must contain not be empty"
   }
 }

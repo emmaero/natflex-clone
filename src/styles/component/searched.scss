@@ -1,0 +1,34 @@
+.searched {
+  width: 100%;
+  height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  overflow: hidden;
+  .item {
+    position: relative;
+    padding: 0 2px;
+    transition: $duration all;
+    .title-image {
+      position: relative;
+      height: 100%;
+      img {
+        position: relative;
+        max-height: 280px;
+      }
+      .title-logo {
+        position: absolute;
+        z-index: 1;
+        object-fit: contain;
+        max-height: 48px;
+        top: 48px;
+        left: 8px;
+        width: 70%;
+      }
+    }
+    &:hover {
+      // margin: 0 40px;
+      z-index: 3;
+      transform: scale(1.15);
+    }
+  }
+}

@@ -10,11 +10,8 @@ import InputField from "./shared/InputField";
 
 export default function FormLogin() {
   // Global state
-  
   const { setUser } = useUser();
-
   const { setIsLogged } = useAuth();
-
   const history = useHistory();
 
   const [email, setEmail] = useState("");
@@ -37,16 +34,18 @@ export default function FormLogin() {
     }
   return (
     <div className="login-body">
-      <div className="login">
+      <form className="login">
         <h1 className="login__title">Sign In</h1>
-        <p>{errorMessage}</p>
+
+        {errorMessage && <div className="auth-error">{errorMessage}</div>}
+
         <InputField state={[email, setEmail]} options={fields.email} />
         <InputField state={[password, setPassword]} options={fields.password} />
         <button onClick={onSubmit} className="login__sign-in" type="button">
           Sign In
         </button>
         <LoginFormDetails />
-      </div>
+      </form>
     </div>
   );
 }

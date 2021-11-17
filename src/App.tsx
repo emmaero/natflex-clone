@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import Browser from "./components/shared/Browser";
+import Footer from "./components/shared/Footer";
 import Modal from "./components/shared/Modal";
 import { getDocument } from "./scripts/firestore";
 import { useAuth } from "./states/AuthProvider";
@@ -9,7 +10,7 @@ function App() {
   // Global state
 
   const { uid, setIsLogged, isLogged } = useAuth();
- 
+
   const { setUser } = useUser();
 
   // Local state

@@ -1,0 +1,104 @@
+.user-nav {
+  position: relative;
+  background: $color-black;
+  color: $color-white;
+  padding: 1.4em;
+  display: flex;
+  align-items: center;
+  #logo {
+    width: 6.5em;
+    margin-right: 2em;
+  }
+  .left-menu {
+    display: flex;
+    align-items: baseline;
+    a {
+      cursor: pointer;
+      margin: 0 1em;
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+  .right-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    .search-label {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      align-items: center;
+      margin-right: 16px;
+      button {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        padding-left: 8px;
+        svg {
+          width: 20px;
+          color: $color-white;
+        }
+      }
+      input {
+        height: 32px;
+        background-color: $color-black-transparent;
+        border: 1px solid $color-white;
+        color: $color-white;
+        padding-left: 32px;
+        animation: grow $duration alternate;
+        width: 272px;
+      }
+    }
+
+    .user {
+      position: relative;
+      svg {
+        width: 24px;
+      }
+      .fa-caret-down {
+        margin: 0.2em 0.6em 0.2em 0.4em;
+        width: 12px;
+        transition: $duration;
+      }
+      margin: 0 1.2em;
+      .user-links {
+        position: absolute;
+
+        ul {
+          display: none;
+          list-style: none;
+          border-bottom: solid 1px $color-gray;
+          li {
+            padding: 8px 0;
+            cursor: pointer;
+          }
+          margin-bottom: 8px;
+        }
+      }
+      img {
+        width: 3em;
+        height: 3em;
+        margin-right: 1em;
+      }
+      &:hover {
+        .user-links ul {
+          display: block;
+        }
+        .fa-caret-down {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 272px;
+  }
+}
