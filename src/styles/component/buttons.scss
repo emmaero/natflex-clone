@@ -1,11 +1,13 @@
 .button-play {
 }
 .button-link {
+  position: relative;
   background: transparent;
   border: none;
   color: $color-white;
   font-size: inherit;
   cursor: pointer;
+  z-index: 2;
 }
 .play {
   background-color: $color-white;
@@ -44,4 +46,7 @@
 iframe {
   height: 100vh;
   width: 100%;
+}
+.icon {
+  color: $color-white;
 }
