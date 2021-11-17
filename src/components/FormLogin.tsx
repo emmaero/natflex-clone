@@ -23,15 +23,15 @@ export default function FormLogin() {
     const account = await signIn(email, password);
     account.isLogged ? onSuccess(account.payload) : onFailure(account.payload);
   }
-    async function onSuccess(uid: string) {
-      const document = await getDocument("users", uid);
-      setUser(document);
-      setIsLogged(true);
-      history.push("/");
-    }
-    function onFailure(message: string) {
-      setErrorMessage(message);
-    }
+  async function onSuccess(uid: string) {
+    const document = await getDocument("users", uid);
+    setUser(document);
+    setIsLogged(true);
+    history.push("/");
+  }
+  function onFailure(message: string) {
+    setErrorMessage(message);
+  }
   return (
     <div className="login-body">
       <form className="login">

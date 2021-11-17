@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { iTitle } from "../../interfaces/iTitle";
 
-import UserNavigation from "./UserNavigation";
 interface iProp {
   item: iTitle;
 }

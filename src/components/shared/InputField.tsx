@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import iInputFields from "../../interfaces/iInputFields";
 
 export default function InputField({ options, state }: iInputFields) {
@@ -20,9 +20,7 @@ export default function InputField({ options, state }: iInputFields) {
       setFieldIsValid(true);
     }
   }
-  useEffect(() => {
-    if (fieldIsValid) return () => {};
-  }, []);
+ 
   const inputIsInvalid = !fieldIsValid && fieldTouched;
   const inputClass = inputIsInvalid ? "login__group__input__error" : "";
   const inputTouchClass = fieldTouched ? "login__group__input__touch" : "";

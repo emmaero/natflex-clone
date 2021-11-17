@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import fields from "../data/field-sign-up.json";
 import { createAccount } from "../scripts/authentication";
 import { createDocumentWithId } from "../scripts/firestore";
@@ -57,6 +58,9 @@ export default function SignUp() {
             />
             <InputField state={[name, setName]} options={fields.name} />
             <span>{errorMessage}</span>
+            <Link to="/login-help" className="link-forgot-password">
+              Forgot your password?
+            </Link>
             <button className="sign-up-button" type="submit">
               Sign Up
             </button>
