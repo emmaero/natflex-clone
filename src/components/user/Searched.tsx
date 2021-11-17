@@ -9,13 +9,14 @@ interface iProp {
 export default function Searched({ list, searchedTerm }: iProp) {
   const searched = list
     .filter((val) => {
-      if (searchedTerm == "") {
+      if (searchedTerm === "") {
         return val;
       } else if (
         val.title.toLocaleLowerCase().includes(searchedTerm.toLocaleLowerCase())
       ) {
         return val;
       }
+      return;
     })
     .map((item: iTitle) => <TitleItem key={item.id} item={item} />);
   return (

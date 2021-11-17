@@ -3,8 +3,9 @@ import logo from "../../asserts/svg/logo.svg";
 import { useUser } from "../../states/UserProvider";
 import DropIcon from "../icons/DropIcon";
 import SearchIcon from "../icons/SearchIcon";
-import UserIcon from "../icons/UserIcon";
 import Logout from "../shared/Logout";
+import userLogo from "../../asserts/images/nexflix-user.png";
+
 interface iProp {
   state: [getter: string, setter: Function];
 }
@@ -42,7 +43,7 @@ export default function UserNavigation({ state }: iProp) {
 
         <div className="user">
           <div className="user-icon">
-            <UserIcon />
+            <img src={userLogo} alt="netflix" />
             <DropIcon />
           </div>
           <div className="user-links">

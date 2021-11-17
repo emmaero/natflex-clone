@@ -23,6 +23,7 @@
       .item {
         position: relative;
         padding: 0 2px;
+        min-width: 260px;
         transition: $duration all;
         .title-image {
           position: relative;

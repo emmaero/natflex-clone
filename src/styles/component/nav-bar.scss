@@ -30,7 +30,7 @@
       flex-direction: row;
       position: relative;
       align-items: center;
-      margin-right: 16px;
+      margin-right: 32px;
       button {
         position: absolute;
         background-color: transparent;
@@ -54,11 +54,15 @@
 
     .user {
       position: relative;
+      .user-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
       svg {
         width: 24px;
       }
       .fa-caret-down {
-        margin: 0.2em 0.6em 0.2em 0.4em;
         width: 12px;
         transition: $duration;
       }
@@ -69,18 +73,25 @@
         ul {
           display: none;
           list-style: none;
-          border-bottom: solid 1px $color-gray;
+          z-index: 9;
+          position: relative;
+         
           li {
             padding: 8px 0;
             cursor: pointer;
+             border-bottom: solid 1px $color-gray;
           }
           margin-bottom: 8px;
+          &:hover {
+            display: block;
+          }
         }
       }
       img {
-        width: 3em;
-        height: 3em;
-        margin-right: 1em;
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+        border-radius: 2px;
       }
       &:hover {
         .user-links ul {
