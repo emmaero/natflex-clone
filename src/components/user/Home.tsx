@@ -24,6 +24,19 @@ export default function Home() {
   // variable names -1
   if (error === 2) return <p>Error</p>; // why error === 2, that means error can be 0, 1 as well? Don't you mean status 0,1,2?
 
+  /**
+   * Code consistency and architecture -10
+   * You are doing 2 styles of fetch in the same project:
+   * The first: uses status = 0, 1, 2
+   * The second: has loading, data, error.
+   *
+   * Both handle calling the same database, yet they have 2 ways of working.
+   * A recruiter will see this and reject your project because feels like you have copied
+   * and pasted from different stackoverflow posts instead of you coding your own code.
+   *
+   * The solution for this is to analyze both approaches and use 1 style, meaning one of the 2 approaches needs to be refactored to behave like the other.
+   */
+
   return (
     <div className="home">
       {loading && <p>Loading ⏱</p>}
