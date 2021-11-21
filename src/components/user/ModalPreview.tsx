@@ -1,4 +1,3 @@
-
 import { iTitle } from "../../interfaces/iTitle";
 import Type from "../../interfaces/titleType";
 import ModalMetadata from "./ModalMetadata";
@@ -26,6 +25,8 @@ export default function ModalPreview({
         <img className="modal-title-logo" src={titleLogoURL} alt="</div>" />
         <div className="image-overlay"></div>
         <div className="modal-play">
+          {/* HTML tag semantics -1 */}
+          {/* Titles aren't labels, because if there is content, there is no title? */}
           {showSerie ? (
             <button onClick={() => modalPlay(videoId)} className="play btn">
               <i className="fas fa-play"></i>
@@ -52,6 +53,9 @@ export default function ModalPreview({
         </div>
         <ModalMetadata />
       </div>
+      {/* Code consistency -1 */}
+      {/* You have used the && to make a single if withouth else, but here you are using a if/else and putting "" on the else */}
+      {/* Why you did not write this code as */}
       {category === Type.SERIE && showSerie ? (
         <ThumbnailList onPlay={onPlay} series={item} />
       ) : (

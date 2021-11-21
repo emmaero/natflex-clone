@@ -9,7 +9,7 @@ interface iProp {
 export default function ThumbnailList({ series, onPlay }: iProp) {
   const [season, setSeason] = useState("0");
   const { season1, season2 } = series;
-  // const [list, setList] = useState(Array<string>())
+  // const [list, setList] = useState(Array<string>())  // No comments in production -1
   const seasons = ["Season 1", "Season 2"];
   const list = season === "Season 1" ? season1 : season2;
 
@@ -20,7 +20,12 @@ export default function ThumbnailList({ series, onPlay }: iProp) {
         <SelectFields state={[season, setSeason]} label="" options={seasons} />
       </div>
       {list.map((videoId: string, index: number) => (
-        <ThumbnailCard onPlay={onPlay} key={index} index={index} videoId={videoId} />
+        <ThumbnailCard
+          onPlay={onPlay}
+          key={index}
+          index={index}
+          videoId={videoId}
+        />
       ))}
     </div>
   );

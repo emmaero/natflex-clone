@@ -1,5 +1,7 @@
 import React from "react";
 
+// Hardcoded values -1
+// This should load from a database
 export default function ModalMetadata() {
   return (
     <div className="previewModal--detailsMetadata">

@@ -5,7 +5,7 @@ import InputField from "../shared/InputField";
 import SelectFields from "../shared/SelectFields";
 import option from "../../data/field-title.json";
 import Type from "../../interfaces/titleType";
-import {getDocument, updateDocument } from "../../scripts/firestore";
+import { getDocument, updateDocument } from "../../scripts/firestore";
 
 export default function EpisodeForm() {
   const [serie, setSerie] = useState("");
@@ -27,7 +27,7 @@ export default function EpisodeForm() {
     let title;
     if (id !== undefined) {
       title = await getDocument(path, id);
-      const titleInfo = { ...title, [season]:episodes }
+      const titleInfo = { ...title, [season]: episodes };
       await updateDocument(path, id, titleInfo);
     }
 
@@ -36,8 +36,7 @@ export default function EpisodeForm() {
   }
   function addVideo(event: FormEvent) {
     event.preventDefault();
-    if (videoId.trim()!=="")
-    setEpisodes([...episodes, videoId]);
+    if (videoId.trim() !== "") setEpisodes([...episodes, videoId]);
     setVideoId("");
   }
 

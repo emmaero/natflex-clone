@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
 import Browser from "./components/shared/Browser";
-import Footer from "./components/shared/Footer";
+import Footer from "./components/shared/Footer"; // unused import -1
 import Modal from "./components/shared/Modal";
 import { getDocument } from "./scripts/firestore";
 import { useAuth } from "./states/AuthProvider";
 import { useUser } from "./states/UserProvider";
 import "./styles/style.scss";
-function App() {
-  // Global state
 
+// Export in one line -1 (because this warning has being mention multiple times)
+export default function App() {
+  // Global state (this block of code had weird spaces between them -1)
   const { uid, setIsLogged, isLogged } = useAuth();
-
   const { setUser } = useUser();
 
   // Local state
@@ -23,6 +23,7 @@ function App() {
         setStatus(1);
       } else if (uid !== "") {
         const user = await getDocument(path, uid);
+
         setUser(user);
         setIsLogged(true);
         setStatus(1);
@@ -44,5 +45,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

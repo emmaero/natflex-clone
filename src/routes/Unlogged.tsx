@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; // you dont need to import react since v17 -1
 import { Route } from "react-router";
 import LoginHelp from "../components/LoginHelp";
 import AddEpisode from "../pages/AddEpisode";

@@ -7,6 +7,9 @@ interface iProp {
 }
 
 export default function Searched({ list, searchedTerm }: iProp) {
+  // Readability, Nestinh -1
+  // This code needs refactor is really hard to read withouth expending 5 minutes reading it
+  // This make it prone to mistakes as bugs can be there, but unless you take a lot of time reading it, you will miss them.
   const searched = list
     .filter((val) => {
       if (searchedTerm === "") {
@@ -19,6 +22,7 @@ export default function Searched({ list, searchedTerm }: iProp) {
       return;
     })
     .map((item: iTitle) => <TitleItem key={item.id} item={item} />);
+
   return (
     <section className="searched">
       {searched.length > 0 ? (
